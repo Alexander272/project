@@ -1,0 +1,36 @@
+<nav>
+    <div class="header__nav-wrapper">
+        <a href="/" class="header__brand-logo">Scrapbook</a>
+        <ul id="nav-mobile" class="header__menu">
+
+            {{#if isHome}}
+                <li><a href="/" class="header__link header__active">Главная</a></li>
+            {{else}}
+                <li><a href="/" class="header__link">Главная</a></li>
+            {{/if}}
+
+            {{#if isAdd}}
+                <li><a href="/add" class="header__link header__active">Добавить фото</a></li>
+            {{else}}
+                <li><a href="/add" class="header__link">Добавить фото</a></li>
+            {{/if}}
+
+            {{#if isAuth}}
+                {{#if isAdd}}  
+                    <li><a href="/add" class="header__link header__active">Добавить курс</a></li>
+                {{else}}
+                    <li><a href="/add" class="header__link">Добавить курс</a></li>
+                {{/if}}
+                
+                <li><a href="/auth/logout">Выйти</a></li>
+            {{else}}
+                {{#if isLogin}}  
+                    <li><a href="/auth/login#login" class="header__link header__active">Войти</a></li>
+                {{else}}
+                    <li><a href="/auth/login#login" class="header__link">Войти</a></li>
+                {{/if}}
+            {{/if}}
+
+        </ul>
+    </div>
+</nav>

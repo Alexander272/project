@@ -1,0 +1,42 @@
+.header {
+    &__nav-wrapper {
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #27016b;
+    }
+
+    &__brand-logo{
+        color: $white;
+        font-size: 32px;
+        text-decoration: none;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        padding: 32px 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    &__link {
+        text-decoration: none;
+        padding: 29px 30px;
+        color: $white;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color, color 0.3s ease-in-out;
+
+        &:hover{
+            color: #3fe24d;
+            border-bottom-color: #3fe24d;
+        }
+    }
+    
+    &__active {
+        color: #05fb19;
+        border-bottom-color: #05fb19;
+        background: rgba($color: #000, $alpha: .2);
+    }
+}
+
